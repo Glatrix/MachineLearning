@@ -1,10 +1,4 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace MachineLearning
+namespace NeuralNet
 {
     public class NeuralNetwork
     {
@@ -167,8 +161,7 @@ namespace MachineLearning
         {
             for (int epoch = 0; epoch < epochs; epoch++)
             {
-                int iters = inputs.GetLength(0) - 1;
-                for (int i = 0; i < iters; i++)
+                for (int i = 0; i < inputs.Length; i++)
                 {
                     // Forward pass
                     float[] output = Forward(inputs[i]);
